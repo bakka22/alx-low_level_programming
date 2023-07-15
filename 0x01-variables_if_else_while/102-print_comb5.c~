@@ -21,7 +21,9 @@ int main(void)
 			{
 				for (j = 48 ;  j <= 57 ; j++)
 				{
-					if (n != i && x != j)
+					if ((n == i && x == j) || (n == i && j < x) || i < n )
+						continue;
+					else
 					{
 						putchar(n);
 						putchar(x);
@@ -29,7 +31,9 @@ int main(void)
 						putchar(i);
 						putchar(j);
 					}
-					if (n != 57 && x != 56)
+					if ((n == 84 && x == 48 && i == 48 && j == 48) || (n == 57 && i == 56))
+						continue;
+					else
 					{
 						putchar(',');
 						putchar(' ');
