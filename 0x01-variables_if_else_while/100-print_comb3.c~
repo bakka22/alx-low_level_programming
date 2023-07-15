@@ -9,17 +9,20 @@
 int main(void)
 {
 	int n;
-	char x;
+	int x;
 
-	for (n = 48 ; n <= 57 ; n++)
+	for (n = 48 ; n <= 56 ; n++)
 	{
-		x = n;
-		putchar(x);
-	}
-	for (n = 97 ; n <= 102 ; n++)
-	{
-		x = n;
-		putchar(x);
+		for (x = n + 1 ; x <= 57 ; x++)
+		{
+			putchar(n);
+			putchar(x);
+			if(n != 56)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
 
 	putchar('\n');
