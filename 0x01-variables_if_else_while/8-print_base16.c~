@@ -1,0 +1,27 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+/* more headers goes there */
+/**
+*main - the main function
+* Return: 0 (success)
+*/
+int main(void)
+{
+	int n;
+	char x ;
+
+	for (n = 48 ; n <=57  ; n++)
+	{
+		x = n;
+		putchar(x);
+	}
+	for (n = 97 ; n <= 102 ; n++)
+	{
+		x = n;
+		putchar(x);
+	}
+
+	putchar('\n');
+	return (0);
+}
