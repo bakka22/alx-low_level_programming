@@ -31,7 +31,7 @@ int main(void)
 						putchar(i);
 						putchar(j);
 					}
-					if (n == 57 && i == 56)
+					if (n == 57 && x == 56)
 						continue;
 					else
 					{
