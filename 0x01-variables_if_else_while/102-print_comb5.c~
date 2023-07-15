@@ -19,7 +19,7 @@ int main(void)
 		{
 			for (i = n ; i <= 57 ; i++)
 			{
-				for (j = n + 1 ;  j <= 57 ; j++)
+				for (j = 48 ;  j <= 57 ; j++)
 				{
 					if (i >= x && j > x)
 					{
