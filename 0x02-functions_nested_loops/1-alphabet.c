@@ -5,11 +5,11 @@
 *main - the main function
 * Return: 0 (success)
 */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
+/*int main(void)
+*{
+*	print_alphabet();
+*	return (0);
+}*/
 
 /**
 *print_alphabet - print alphabets in lowercase
