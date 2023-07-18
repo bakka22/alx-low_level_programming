@@ -2,7 +2,7 @@
 
 /**
 * print_sign - check if charcter is an alphabet
-* @c: the number to be checked
+* @n: the number to be checked
 * Return: 1 if posative and 0 otherwise
 */
 int print_sign(int n)
