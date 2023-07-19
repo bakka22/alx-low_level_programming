@@ -1,16 +1,33 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-*print_alphabet - print alphabets in lowercase
+*jack_bauer - print alphabets in lowercase
 * Return: void
 */
-void print_alphabet(void)
+void jack_bauer(void)
 {
 	int i;
+	int j;
+	int x;
+	int y;
 
-	for (i = 97 ; i <= 122 ; i++)
-		putchar(i);
+	for (i = 48 ; i <= 54 ; i++)
+	{
+		for (j = 48 ; j <= 57 ; j++)
+		{
+			for (x = 48 ; x <= 54 ; x++)
+			{
+				for (y = 48 ; y <= 57 ; y++)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(':');
+					putchar(x);
+					putchar(y);
+					putchar(\n);
+				}
+			}
+		}
+	}
 
-	putchar('\n');
 }
