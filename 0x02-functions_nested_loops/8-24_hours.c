@@ -23,12 +23,14 @@ void jack_bauer(void)
 					if (i == 50 && j >=52)
 						continue;
 					else
+					{
 						_putchar(i);
 						_putchar(j);
 						_putchar(':');
 						_putchar(x);
 						_putchar(y);
 						_putchar('\n');
+					}
 				}
 			}
 		}
