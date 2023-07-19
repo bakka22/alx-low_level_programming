@@ -11,7 +11,7 @@ int main(void)
 	pre = 0;
 	result = 1;
 	cur = 1;
-	for (i = 1; i <= 50; i++)
+	for (i = 0; i <= 50; i++)
 	{
 		if (i < 50)
 		{
