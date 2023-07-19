@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*ptint_times_table - print alphabets in lowercase
+*print_times_table - print alphabets in lowercase
 *@n: the number of TT
 * Return: void
 */
