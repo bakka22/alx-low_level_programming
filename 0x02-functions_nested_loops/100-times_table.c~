@@ -9,8 +9,6 @@ void print_times_table(int n)
 {
 	int i, j, x, y, k;
 
-	y = x / 100;
-	k = (x / 10) % 10;
 	if (n < 15)
 	{
 		for (i = 0; i <= n; i++)
@@ -18,6 +16,8 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				x = i * j;
+				y = x / 100;
+				k = (x / 10) % 10;
 				if (j == 0)
 					_putchar(x + '0');
 				else if (x < 10)
