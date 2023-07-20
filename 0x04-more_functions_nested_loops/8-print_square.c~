@@ -1,0 +1,25 @@
+#include "main.h"
+
+/**
+* print_square - check if charcter is an alphabet
+* @size: the length of the line
+* Return: 1 if alphabet and 0 otherwise
+*/
+void print_square(int size)
+{
+	int i, x;
+
+	if (n > 0)
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (x = 0; x < size; x++)
+				_putchar('#');
+
+			_putchar('\n');
+		}
+	}
+	else
+		_putchar('\n');
+
+}
