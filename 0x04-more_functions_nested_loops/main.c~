@@ -7,6 +7,8 @@
  */
 int main(void)
 {
-    more_numbers();
+    print_diagnol(0);
+    print_diagnol(5);
+    print_diagnol(10);
     return (0);
 }
