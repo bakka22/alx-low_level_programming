@@ -1,0 +1,26 @@
+#include <stdio.h>
+/**
+*main - the main function
+*Return: returns 0 (success)
+*/
+int main(void)
+{
+	int i;
+	unsigned int result, pre, cur;
+
+	pre = 0;
+	result = 1;
+	cur = 1;
+	for (i = 0; i <= 97; i++)
+	{
+		result = cur + pre;
+		pre = cur;
+		cur = result;
+		if (i == 97)
+			printf("%d\n", result);
+
+		else if (i < 97)
+			printf("%d, ", result);
+	}
+	return (0);
+}
