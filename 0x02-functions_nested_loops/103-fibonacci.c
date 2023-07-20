@@ -11,6 +11,7 @@ int main(void)
 	pre = 0;
 	result = 1;
 	cur = 1;
+	out = 0;
 	for (i = 0; i <= 31; i++)
 	{
 		result = cur + pre;
@@ -19,6 +20,6 @@ int main(void)
 		if (result % 2 == 0)
 			out += result;
 	}
-	printf("%lu", out);
+	printf("%lu\n", out);
 	return (0);
 }
