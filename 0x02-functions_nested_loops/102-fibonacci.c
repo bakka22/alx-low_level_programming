@@ -17,7 +17,7 @@ int main(void)
 		pre = cur;
 		cur = result;
 		if (i == 49)
-			printf("%lu", result);
+			printf("%lu\n", result);
 
 		else if (i < 49)
 			printf("%lu, ", result);

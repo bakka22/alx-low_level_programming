@@ -11,13 +11,13 @@ int main(void)
 	pre = 0;
 	result = 1;
 	cur = 1;
-	for (i = 0; i <= 32; i++)
+	for (i = 0; i <= 31; i++)
 	{
 		result = cur + pre;
 		pre = cur;
 		cur = result;
 		if (result % 2 == 0)
-			out = out + result;
+			out += result;
 	}
 	printf("%lu", out);
 	return (0);
