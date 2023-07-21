@@ -14,7 +14,7 @@ void print_remaining_days(int month, int day, int year)
 {
 	if (year % 4 == 0)
 	{
-		if (month > 2 && day > 60)
+		if (month > 2 && day >= 60)
 		{
 			day++;
 		}
@@ -39,6 +39,6 @@ int main(void)
 {
 print_remaining_days(2, 60, 2000);
 print_remaining_days(2, 60, 1999);
-print_remaining_days(2, 60, 1996);
+print_remaining_days(3, 61, 1996);
 return 0;
 }
