@@ -1,25 +1,35 @@
 #include <stdio.h>
-
+#include <math.h>
 /**
 * main - check if charcter is an alphabet
 * Return:  0
 */
 int main(void)
 {
-	long long i, chk;
+	long int n, max, i;
 
-	chk = 612852475143;
+	n = 612852475143;
+	max = -1;
 
-		for (i = chk; i < 1; i--)
+	while (n % 2 == 0)
+	{
+		max = 2;
+		n /= 2;
+	}
+
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
-			if (i % 9 != 0 && i % 8 != 0 && i % 7 != 0 && i % 6 != 0 && i % 5 != 0 && i % 4 != 0 && i % 3 != 0 && i % 2 != 0 )
-			{
-				if (chk % i == 0)
-				{
-					printf("%lld \n", i);
-					printf("hello\n");
-				}
-			}
+			max = i;
+			n = n / i;
 		}
+	}
+
+	if (n > 2)
+		max = n;
+
+	printf("%ld\n", max);
+
 	return (0);
 }
