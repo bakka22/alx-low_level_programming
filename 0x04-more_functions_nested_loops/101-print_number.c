@@ -7,31 +7,22 @@
 */
 void print_number(int n)
 {
-	int i, a, b, c;
+	unsigned int n1;
 
-	a = 1;
 	if (n < 0)
 	{
-		_putchar('-');
-		n = n * -1;
-		_putchar(n);
+		n1 = -n;
+		_putchar('-')
+	}
+	else
+	{
+		n1 = n;
 	}
 
-	while (n != 0)
+	if (n1 / 10)
 	{
-		n = n / 10;
-		a += 1;
-		_putchar(n);
+		print_number(n1 / 10);
 	}
 
-	for (i = a - 1; i > 0; i--)
-	{
-		b = 1;
-		for (c = 1; c <= a - 1; i++)
-		{
-			b = b * 10; 
-		}
-		_putchar((n / b) + '0');
-	}
-	_putchar(n % 10 + '0');
+	_putchar(n1 % 10) + '0');
 }

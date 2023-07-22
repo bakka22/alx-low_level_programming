@@ -9,7 +9,7 @@ void print_number(int n)
 {
 	int i, a, b, c;
 
-	a = 0;
+	a = 1;
 	if (n < 0)
 	{
 		_putchar('-');
@@ -17,17 +17,17 @@ void print_number(int n)
 		_putchar(n);
 	}
 
-	while (n > 10)
+	while (n != 0)
 	{
 		n = n / 10;
 		a += 1;
 		_putchar(n);
 	}
 
-	for (i = a; i > 0; i--)
+	for (i = a - 1; i > 0; i--)
 	{
 		b = 1;
-		for (c = 1; c <= a; i++)
+		for (c = 1; c <= a - 1; i++)
 		{
 			b = b * 10; 
 		}
