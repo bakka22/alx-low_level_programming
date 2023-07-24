@@ -9,7 +9,7 @@ int main(void)
 {
 	char str[] = "hello bakka";
 
-	_puts(str);
+	print_rev(str);
 
     return (0);
 }
