@@ -19,7 +19,7 @@ void _puts(char *str)
 			break;
 
 		p += 1;
-		if (*p == ('\0')
+		if (*p == '\0')
 			break;
 	}
 	_putchar('\n');

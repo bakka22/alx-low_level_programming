@@ -15,7 +15,7 @@ void _puts(char *str)
 	{
 		p += 1;
 		_putchar(*p);
-		if (*p == '\0');
+		if (*p == '\0')
 			break;
 
 		p += 1;
