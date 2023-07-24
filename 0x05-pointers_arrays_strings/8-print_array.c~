@@ -16,11 +16,11 @@ void print_array(int *a, int n)
 	{
 		if (i == n - 1)
 		{
-			_putchar(*p);
+			print_number(*P);
 		}
 		else
 		{
-			_putchar(*p);
+			print_number(*P);
 			_putchar(',');
 			_putchar(' ');
 		}
