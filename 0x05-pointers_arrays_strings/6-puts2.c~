@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* _puts2 - check if charcter is an alphabet
+* puts2 - check if charcter is an alphabet
 * @str : pointer argument
 * Return: 1 if alphabet and 0 otherwise
 */
-void _puts2(char *str)
+void puts2(char *str)
 {
 	char *p;
 
