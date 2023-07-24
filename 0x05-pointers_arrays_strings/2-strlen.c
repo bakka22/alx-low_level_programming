@@ -5,9 +5,9 @@
 * @s : pointer argument
 * Return: 1 if alphabet and 0 otherwise
 */
-void _strlen(char *s)
+int _strlen(char *s)
 {
-	char com, *p;
+	char com, *h;
 	int counter;
 
 	counter = 0;
