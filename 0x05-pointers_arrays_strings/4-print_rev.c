@@ -13,10 +13,11 @@ void print_rev(char *str)
 	p = p + _strlen(str) - 1;
 	while (1)
 	{
-		_putchar(*p);
-		p -= 1;
 		if (p < str)
 			break;
+
+		_putchar(*p);
+		p -= 1;
 	}
 	_putchar('\n');
 }
