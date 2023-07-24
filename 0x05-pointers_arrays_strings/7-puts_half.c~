@@ -16,7 +16,7 @@ void puts_half(char *str)
 		if (*p == '\0')
 			break;
 
-		_putchar(*P);
+		_putchar(*p);
 		p += 1;
 	}
 	_putchar('\n');
