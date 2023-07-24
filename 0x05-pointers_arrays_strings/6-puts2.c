@@ -10,13 +10,12 @@ void puts2(char *str)
 	char *p;
 
 	p = str;
-	p = p - 1;
 	while (1)
 	{
 		if (*p == '\0')
 			break;
-		p += 1;
 		_putchar(*p);
+		p += 1;
 
 		if (*p == '\0')
 			break;
