@@ -10,7 +10,10 @@ void puts_half(char *str)
 	char *p;
 
 	p = str;
-	p += (_strlen(str) / 2);
+	if (_strlen(str) % 2 == 0)
+		p += (_strlen(str) / 2);
+	else
+		p += (_strlen(str) + 1) / 2;
 	while (1)
 	{
 		if (*p == '\0')
