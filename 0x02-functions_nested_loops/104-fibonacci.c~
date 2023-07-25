@@ -17,7 +17,7 @@ int main(void)
 		pre = cur;
 		cur = result;
 		if (i == 97)
-			printf("d\n", result);
+			printf("%d\n", result);
 
 		else if (i < 97)
 			printf("%d, ", result);

@@ -6,7 +6,7 @@
 int main(void)
 {
 	int i;
-	unsigned int result, pre, cur;
+	double result, pre, cur;
 
 	pre = 0;
 	result = 1;
