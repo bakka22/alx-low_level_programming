@@ -12,5 +12,7 @@ int main(void)
 	char *ptr;
 	ptr = _strncat(str, str2, 2);
 	printf("%s\n", ptr);
+	ptr = _strncat(str, str2, 10);
+	printf("%s\n", ptr);
     return (0);
 }

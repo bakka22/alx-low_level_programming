@@ -10,9 +10,9 @@ int main(void)
 	char str[] = "-abobaker55  mohamed22 and 5223";
 	char str2[] = "bakka";  
 	char *ptr;
-	ptr = _strncat(str, str2, 2);
+	ptr = _strncpy(str, str2, 2);
 	printf("%s\n", ptr);
-	ptr = _strncat(str, str2, 10);
+	ptr = _strncpy(str, str2, 10);
 	printf("%s\n", ptr);
     return (0);
 }
