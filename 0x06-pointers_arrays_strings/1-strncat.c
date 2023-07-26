@@ -39,7 +39,7 @@ char *_strncat(char *dest, char *src, int n)
 	if (n != 0)
 	{
 		j = 0;
-		for (i = _strlen(dest); j < n; i++)
+		for (i = _strlen(dest); j < n && src[j] != '\0'; i++)
 		{
 			dest[i] = src[j];
 			j += 1;
