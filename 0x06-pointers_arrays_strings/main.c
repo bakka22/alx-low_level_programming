@@ -14,5 +14,7 @@ int main(void)
 	printf("%s\n", ptr);
 	ptr = _strncpy(str, str2, 10);
 	printf("%s\n", ptr);
+	ptr = _strncpy(str, str2, 4);
+	printf("%s\n", ptr);
     return (0);
 }

@@ -11,7 +11,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
-	for (i = 0; src[i] != '\0' && i < n; i++)
+	for (i = 0; i < n - 1; i++)
 	{
 		dest[i] = src[i];
 	}
@@ -19,29 +19,4 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = 0;
 	return (dest);
 }
-#include "main.h"
 
-/**
-* _strlen - check if charcter is an alphabet
-* @s : pointer argument
-* Return: 1 if alphabet and 0 otherwise
-*/
-int _strlen(char *s)
-{
-	char com, *h;
-	int counter;
-
-	counter = 0;
-	h = s;
-	com = *h;
-	while (1)
-	{
-		if (com == '\0')
-			break;
-
-		counter += 1;
-		h += 1;
-		com = *h;
-	}
-	return (counter);
-}
