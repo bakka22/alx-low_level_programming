@@ -36,12 +36,15 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
-	j = 0;
-	for (i = _strlen(dest); j < n; i++)
+	if (n != 0)
 	{
-		dest[i] = src[j];
-		j += 1;
+		j = 0;
+		for (i = _strlen(dest); j < n; i++)
+		{
+			dest[i] = src[j];
+			j += 1;
+		}
+		dest[i++] = '\0';
 	}
-	dest[i++] = '\0';
-	return (dest);
+		return (dest);
 }
