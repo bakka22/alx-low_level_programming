@@ -29,7 +29,7 @@ int _strlen(char *s)
 * _strncat - check if charcter is an alphabet
 * @dest : pointer argument
 * @src : pointer argument
-* @n : number 
+* @n : number
 * Return: 1 if alphabet and 0 otherwise
 */
 char *_strncat(char *dest, char *src, int n)
