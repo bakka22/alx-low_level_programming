@@ -1,0 +1,41 @@
+#include "main.h"
+#include <stdio.h>
+/**
+* print_number - check if charcter is an alphabet
+* @n: the length of the line
+* Return: 1 if alphabet and 0 otherwise
+*/
+void print_number(int n)
+{
+	int i, a, b, c;
+
+	a = 0;
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+		printf("inside if (n < 0  ");
+	}
+	printf("outside if  ");
+	while (n / 10)
+	{
+		n = n / 10;
+		a += 1;
+		printf("inside while loop  ");
+	}
+
+	for (i = a - 1; i > 0; i--)
+	{
+		printf("inside first for  ");
+		b = 1;
+		for (c = 0; c <= a - 1; i++)
+		{
+			/*printf("inside second for");*/
+			b = b * 10; 
+		}
+		printf("outside second for  ");
+		_putchar((n / b) + '0');
+	}
+	printf("outsude first for ");
+	_putchar(n % 10 + '0');
+}
