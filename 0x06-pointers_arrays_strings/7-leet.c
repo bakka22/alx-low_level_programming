@@ -20,7 +20,7 @@ char *leet(char *a)
 		 a[i] == 'l' || a[i] == 'L')
 		{
 			con = a[i] - 65;
-			a[i] = ls[con];
+			a[i] = ls[con] + 48;
 		}
 	}
 	return (a);
