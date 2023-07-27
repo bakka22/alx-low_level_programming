@@ -19,13 +19,14 @@ char *rot13(char *a)
 	char *ptr;
 
 	ptr = a;
-	while (a)
+	while (*ptr != '\0')
 	{
 		for (i = 0; i < sizeof(ori) / sizeof(char); i++)
 		{
 			if (*ptr == ori[i])
 			{
 				*ptr = des[i];
+				break;
 			}
 		}
 		ptr += 1;
