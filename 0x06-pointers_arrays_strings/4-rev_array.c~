@@ -20,6 +20,6 @@ void reverse_array(int *a, int n)
 		a[i] = *p;
 		*p = rep;
 		p = p - 1;
-	} 
+	}
 }
 
