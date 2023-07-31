@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <stdio.h>
 /**
 * _strchr - check if charcter is an alphabet
 * @s : pointer argument
@@ -7,18 +8,14 @@
 */
 char *_strchr(char *s, char c)
 {
-	char *p;
+	/*char *p;*/
 	int i;
 
-	p = s;
-	for (;; i++)
-	{
-		if (*p == c)
-			return (p);
-		else if (*p == '\0')
-			return (NULL);
 
-		p += 1;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	return (NULL);
+	return (NULL); 
 }
