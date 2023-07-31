@@ -7,12 +7,16 @@
  */
 int main(void)
 {
-	char str[] = "abobaker altom babekir mohammed"; 
+	char str[] = "abobaker altom babekir mohammed";
+	char str2[6];
 	char *ptr;
-	ptr = _strchr(str, 'l');
+	ptr = _strchr(str, '\0');
 	printf("%s\n", ptr);
-	ptr = _strchr(str, 'x');
-	printf("%s\n", ptr);
+	ptr = _strchr(str2, 'x');
+	if (ptr != NULL)
+		printf("%s\n", ptr);
+	else
+		printf("ptr is NULL");
 
     return (0);
 }

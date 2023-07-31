@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	char str[] = "abobaker altom babekir mohammed"; 
+	char str[] = "abobaker altom babekir mohammed";
 	char *ptr;
-	ptr = _strchr(str, 'l');
+	ptr = _strchr(str, '\0');
 	printf("%s\n", ptr);
 	ptr = _strchr(str, 'x');
 	if (ptr != NULL)
