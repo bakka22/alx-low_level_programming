@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
 * _strchr - check if charcter is an alphabet
 * @s : pointer argument
@@ -21,5 +22,5 @@ char *_strchr(char *s, char c)
 	if (*p)
 		return (p);
 	else
-		return ('\0');
+		return (NULL);
 }
