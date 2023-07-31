@@ -9,9 +9,13 @@ int main(void)
 {
 	char str[] = "abobaker altom babekir mohammed"; 
 	char *ptr;
-	ptr = _memset(str, 'A', 5);
+	ptr = _strchr(str, 'l');
 	printf("%s\n", ptr);
-	printf("%s\n", str);
+	ptr = _strchr(str, 'x');
+	if (ptr != NULL)
+		printf("%s\n", ptr);
+	else
+		printf("ptr is NULL");
 
     return (0);
 }
