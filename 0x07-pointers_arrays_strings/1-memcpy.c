@@ -7,9 +7,9 @@
 * @n : number
 * Return: 1 if alphabet and 0 otherwise
 */
-char *_memcpy(char *dest, char *src, int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
