@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
 * _strpbrk - check if charcter is an alphabet
 * @s : pointer argument
@@ -17,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 				return (&s[i]);
 		}
 		if (s[i] == '\0')
-			return (NULL);
+			return ('\0');
 	}
-	return (NULL);
+	return ('\0');
 }
