@@ -1,5 +1,5 @@
 #include <stddef.h>
-#include <main.h>
+#include "main.h"
 /**
 * print_chessboard - check if charcter is an alphabet
 * @a : pointer argument
@@ -19,7 +19,7 @@ void print_chessboard(char (*a)[8])
 			}
 			else
 			{
-				_putchar(a[i][j];
+				_putchar(a[i][j]);
 			}
 		}
 	}
