@@ -7,14 +7,15 @@
 */
 char *_memset(char *s, char b, int n)
 {
-	char *p;
+	char *p, new;
 	int i;
 
+	new = b;
 	p = s;
 	for (i = 0; i < n; i++)
 	{
-		*p = b;
+		*p = new;
 		p += 1;
 	}
-	return (p);
+	return (s);
 }
