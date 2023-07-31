@@ -11,7 +11,7 @@ int main(void)
 	char *ptr;
 	ptr = _strstr(str,"moh" );
 	printf("%s\n", ptr);
-	ptr = _strstr(str, "d");
+	ptr = _strstr(str, "");
 	if (ptr != NULL)
 		printf("%s\n", ptr);
 	else
