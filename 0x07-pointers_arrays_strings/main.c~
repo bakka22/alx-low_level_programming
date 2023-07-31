@@ -9,9 +9,9 @@ int main(void)
 {
 	char str[] = "abobaker altom babekir mohammed";
 	char *ptr;
-	ptr = _strpbrk(str,"xwwr" );
+	ptr = _strstr(str,"moh" );
 	printf("%s\n", ptr);
-	ptr = _strpbrk(str, "xwwz\0r");
+	ptr = _strstr(str, "tom");
 	if (ptr != NULL)
 		printf("%s\n", ptr);
 	else
