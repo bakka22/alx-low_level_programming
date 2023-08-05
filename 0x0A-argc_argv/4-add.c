@@ -1,0 +1,65 @@
+/**
+* _atoi - check if charcter is an alphabet
+* @s : pointer argument
+* Return: 1 if alphabet and 0 otherwise
+*/
+int _atoi(char *s)
+{
+	int i, sign;
+	double new;
+
+	sign = 0;
+	new = 0;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == 45)
+			sign += 1;
+
+		if (s[i] >= 48 && s[i] <= 57)
+		{
+			new = (new * 10) + (s[i] - 48);
+		}
+		if (s[i] < 48 || s[i] > 57)
+		{
+			return (-1);
+		}
+	}
+		if (sign % 2 != 0)
+			new = -new;
+		else
+			new = new;
+
+		return (new);
+}
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+/* more headers goes there */
+/**
+*main - the main function
+* @argc : arg count
+* @argv : arg vector
+* Return: 0 (success)
+*/
+int main(int argc, char **argv)
+{
+	int result, i;
+
+	result = 0;
+	if (argc == 1)
+	{
+		printf("%d\n", 0);
+		return (0);
+	}
+	for (i = 1; i < argc; i++)
+	{
+		if (_atoi(argv[i]) < 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		result = result + _atoi(argv[i]);
+	}
+	printf("%d\n", result);
+	return (0);
+}
