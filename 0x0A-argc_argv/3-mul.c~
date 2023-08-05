@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
 * _atoi - check if charcter is an alphabet
 * @s : pointer argument
