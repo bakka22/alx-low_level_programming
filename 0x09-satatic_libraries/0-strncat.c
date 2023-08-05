@@ -1,0 +1,50 @@
+#include "main.h"
+
+/**
+* _strlen - check if charcter is an alphabet
+* @s : pointer argument
+* Return: 1 if alphabet and 0 otherwise
+*/
+int _strlen(char *s)
+{
+	char com, *h;
+	int counter;
+
+	counter = 0;
+	h = s;
+	com = *h;
+	while (1)
+	{
+		if (com == '\0')
+			break;
+
+		counter += 1;
+		h += 1;
+		com = *h;
+	}
+	return (counter);
+}
+
+/**
+* _strncat - check if charcter is an alphabet
+* @dest : pointer argument
+* @src : pointer argument
+* @n : number
+* Return: 1 if alphabet and 0 otherwise
+*/
+char *_strncat(char *dest, char *src, int n)
+{
+	int i, j;
+
+	if (n != 0)
+	{
+		j = 0;
+		for (i = _strlen(dest); j < n && src[j] != '\0'; i++)
+		{
+			dest[i] = src[j];
+			j += 1;
+		}
+		dest[i++] = '\0';
+	}
+		return (dest);
+}
