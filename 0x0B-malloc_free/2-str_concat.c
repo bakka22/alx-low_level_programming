@@ -26,6 +26,7 @@ int _strlen(char *s)
 }
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
 * str_concat - check if charcter is an alphabet
 * @s1 : pointer argument
@@ -35,26 +36,27 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	int i, x, y;
+	int i, x, y, j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
+	j = 0;
 	y = _strlen(s2);
 	x = _strlen(s1);
 	ptr = malloc((x + y) * sizeof(char) + 1);
 	if (ptr == NULL)
 		return (NULL);
-
 	for (i = 0; i < x; i++)
 	{
 		ptr[i] = s1[i];
 	}
 	for (i = x; i < (x + y); i++)
 	{
-		ptr[i] = s2[i];
+		ptr[i] = s2[j];
+		j++;
 	}
 	return (ptr);
 }
