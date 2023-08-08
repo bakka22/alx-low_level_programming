@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stddef.h>
+
+int main()
+{
+	int x = 55 + NULL;
+	printf("%d\n", x);
+	return (0);
+}
