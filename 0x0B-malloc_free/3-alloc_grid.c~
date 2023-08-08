@@ -15,13 +15,15 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	p = malloc(sizeof(int) * width * height);
 	p2 = malloc(sizeof(p) * height);
-	if (p == NULL || p2 == NULL)
+	if (p == NULL)
 	{
-		if (p != NULL)
-			free(p);
-		if (p2 != NULL)
+		if(p2 != NULL)
 			free(p2);
-
+		return (NULL);
+	}
+	if (p2 == NULL)
+	{
+		free(p);
 		return (NULL);
 	}
 
