@@ -31,7 +31,7 @@ int _strlen(char *s)
 * @str : pointer argument
 * Return: 1 if alphabet and 0 otherwise
 */
-char *strdup(char *str)
+char *_strdup(char *str)
 {
 	char *ptr;
 	int i, x;
