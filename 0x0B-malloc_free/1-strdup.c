@@ -37,10 +37,10 @@ char *_strdup(char *str)
 	int i, x;
 
 	x = _strlen(str);
-	if (x == 0)
+	if (str == NULL)
 		return (NULL);
 
-	ptr = malloc(x * sizeof(char));
+	ptr = malloc(x * sizeof(char) + 1);
 	if (ptr == NULL)
 		return (NULL);
 
