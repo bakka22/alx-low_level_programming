@@ -1,5 +1,7 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
 /**
 * _strlen - check if charcter is an alphabet
 * @s : pointer argument
@@ -25,9 +27,53 @@ int _strlen(char *s, char c)
 	}
 	return (counter);
 }
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
+
+/**
+* sup - support
+* @ptr : ...
+* @a : ...
+* @str : ...
+* Return: ....
+*/
+char **sup(char **ptr, int a, char *str)
+{
+	int s, x, i, j;
+
+	s = 0;
+	x = 1;
+	for (i = 1; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' ')
+			continue;
+		if (str[i] != ' ' && str[i - 1] == ' ')
+		{
+			s = _strlen(str + i, ' ');
+			ptr[x] = malloc(sizeof(char) * (s + 1));
+			if (ptr[x] == NULL)
+			{
+				for (j = x; j >= 0; j--)
+					free(ptr[j]);
+
+				free(ptr);
+				return (NULL);
+			}
+			for (j = 0; j < s; j++)
+			{
+				ptr[x][j] = str[i + j];
+			}
+			ptr[x][j] = '\0';
+			x += 1;
+		}
+	}
+	for (i = 0; i < a; i++)
+	{
+		ptr[0][i] = str[i];
+	}
+	ptr[0][i] = '\0';
+	ptr[x] = NULL;
+	return (ptr);
+}
+
 /**
 * strtow - check if charcter is an alphabet
 * @str : pointer argument
@@ -36,7 +82,7 @@ int _strlen(char *s, char c)
 char **strtow(char *str)
 {
 	char **ptr;
-	int i, x, y, s, j, a;
+	int i, y, a;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -61,50 +107,9 @@ char **strtow(char *str)
 		free(ptr);
 		return (NULL);
 	}
-	s = 0;
-	x = 0;
-	for (i = 1; str[i] != '\0'; i++)
-	{
-		if (str[i] == ' ')
-			continue;
-		if (str[i] != ' ' && str[i - 1] == ' ')
-		{
-			s = _strlen(str + i, ' ');
-			ptr[x] = malloc(sizeof(char) * (s + 1));
-			if (ptr[x] == NULL)
-			{
-				for (j = x; j >= 0; j--)
-					free(ptr[j]);
+	ptr = sup(ptr, a, str);
+	if (ptr == NULL)
+		return (NULL);
 
-				free(ptr);
-				return (NULL);
-			}
-			x += 1;
-		}
-	}
-	for (i = 0; i < a; i++)
-	{
-		ptr[0][i] = str[i];
-	}
-	ptr[0][i] = '\0';
-	s = 0;
-	x = 0;
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] == ' ')
-			continue;
-
-		if (str[i] != ' ' && str[i - 1] == ' ')
-		{
-			s = _strlen(str + i, ' ');
-			for (j = 0; j < s; j++)
-			{
-				ptr[x][j] = str[i + j];
-			}
-			ptr[x][j] = '\0';
-			x += 1;
-		}
-	}
-	ptr[x] = NULL;
 	return (ptr);
 }
