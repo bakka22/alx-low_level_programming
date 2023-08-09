@@ -33,14 +33,14 @@ int _strlen(char *s, char c)
 * @ptr : ...
 * @a : ...
 * @str : ...
+* @ x : ...
 * Return: ....
 */
-char **sup(char **ptr, int a, char *str)
+char **sup(char **ptr, int a, char *str, int x)
 {
-	int s, x, i, j;
+	int s, i, j;
 
 	s = 0;
-	x = 1;
 	for (i = 1; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
@@ -65,11 +65,14 @@ char **sup(char **ptr, int a, char *str)
 			x += 1;
 		}
 	}
-	for (i = 0; i < a; i++)
+	if (str[0] != ' ')
 	{
-		ptr[0][i] = str[i];
+		for (i = 0; i < a; i++)
+		{
+			ptr[0][i] = str[i];
+		}
+		ptr[0][i] = '\0';
 	}
-	ptr[0][i] = '\0';
 	ptr[x] = NULL;
 	return (ptr);
 }
@@ -82,10 +85,11 @@ char **sup(char **ptr, int a, char *str)
 char **strtow(char *str)
 {
 	char **ptr;
-	int i, y, a;
+	int i, y, a, x;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
+	x = 0;
 	y = 2;
 	for (i = 1; str[i] != '\0'; i++)
 	{
@@ -99,15 +103,19 @@ char **strtow(char *str)
 	if (ptr == NULL)
 		return (NULL);
 
-	a = _strlen(str, ' ');
-	ptr[0] = malloc(sizeof(char) * (a + 1));
-	if (ptr[0] == NULL)
+	if (str[0] != ' ')
 	{
-		free(ptr[0]);
-		free(ptr);
-		return (NULL);
+		a = _strlen(str, ' ');
+		ptr[0] = malloc(sizeof(char) * (a + 1));
+		if (ptr[0] == NULL)
+		{
+			free(ptr[0]);
+			free(ptr);
+			return (NULL);
+		}
+		x = 1;
 	}
-	ptr = sup(ptr, a, str);
+	ptr = sup(ptr, a, str, x);
 	if (ptr == NULL)
 		return (NULL);
 
