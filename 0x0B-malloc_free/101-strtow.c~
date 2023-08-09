@@ -85,7 +85,7 @@ char **sup(char **ptr, int a, char *str, int x)
 char **strtow(char *str)
 {
 	char **ptr;
-	int i, y, a;
+	int i, y, a, x;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
