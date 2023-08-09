@@ -103,9 +103,9 @@ char **strtow(char *str)
 		if (str[i] != ' ' && str[i - 1] == ' ')
 			y += 1;
 	}
-	if ((str[0] != ' ' && y == 2) || str[0] == ' ' && y == 1)
+	if ((str[0] != ' ' && y == 2) || (str[0] == ' ' && y == 1))
 	{
-		ptr == malloc(sizeof(char *) * 2);
+		ptr = malloc(sizeof(char *) * 2);
 		ptr[0] = " ";
 		ptr[1] = NULL;
 		return (ptr);

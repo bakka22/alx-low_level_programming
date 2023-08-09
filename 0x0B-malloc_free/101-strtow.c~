@@ -90,7 +90,11 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	x = 0;
-	y = 2;
+	if (str[0] != ' ')
+		y = 2;
+	else
+		y = 1;
+
 	for (i = 1; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
@@ -98,6 +102,13 @@ char **strtow(char *str)
 
 		if (str[i] != ' ' && str[i - 1] == ' ')
 			y += 1;
+	}
+	if ((str[0] != ' ' && y == 2) || (str[0] == ' ' && y == 1))
+	{
+		ptr == malloc(sizeof(char *) * 2);
+		ptr[0] = " ";
+		ptr[1] = NULL;
+		return (ptr);
 	}
 	ptr = malloc(sizeof(char *) * y);
 	if (ptr == NULL)
