@@ -112,7 +112,7 @@ char **strtow(char *str)
 	if (ptr == NULL)
 		return (NULL);
 
-	/*if (str[0] != ' ')
+	if (str[0] != ' ')
 	{
 		a = _strlen(str, ' ');
 		ptr[0] = malloc(sizeof(char) * (a + 1));
@@ -123,7 +123,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		x = 1;
-	}*/
+	}
 	ptr = sup(ptr, a, str, x);
 	if (ptr == NULL)
 		return (NULL);
