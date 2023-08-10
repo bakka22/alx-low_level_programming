@@ -48,7 +48,7 @@ char **sup(char **ptr, int a, char *str, int x)
 		if (str[i] != ' ' && str[i - 1] == ' ')
 		{
 			s = _strlen(str + i, ' ');
-			ptr[x] = malloc(sizeof(char) * (s + 1));
+			ptr[x] = malloc(sizeof(char) * (s) + 1);
 			if (ptr[x] == NULL)
 			{
 				for (j = x; j >= 0; j--)

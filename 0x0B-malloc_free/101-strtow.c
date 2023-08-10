@@ -94,7 +94,7 @@ char **strtow(char *str)
 	/*if (str[0] != ' ')
 		y = 2;
 	else*/
-	y = 1;
+	y = 0;
 
 	for (i = 1; str[i] != '\0'; i++)
 	{
