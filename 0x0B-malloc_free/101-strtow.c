@@ -73,7 +73,6 @@ char **sup(char **ptr, int a, char *str, int x)
 		}
 		ptr[0][i] = '\0';
 	}
-	ptr[x] = NULL;
 	return (ptr);
 }
 

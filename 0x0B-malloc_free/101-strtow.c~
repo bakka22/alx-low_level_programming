@@ -91,10 +91,10 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	x = 0;
-	if (str[0] != ' ')
+	/*if (str[0] != ' ')
 		y = 2;
-	else
-		y = 1;
+	else*/
+	y = 1;
 
 	for (i = 1; str[i] != '\0'; i++)
 	{
