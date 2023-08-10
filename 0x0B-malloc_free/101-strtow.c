@@ -95,7 +95,6 @@ char **strtow(char *str)
 	else
 		y = 1;
 
-	count = 0;
 	for (i = 1; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')

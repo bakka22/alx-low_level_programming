@@ -85,7 +85,7 @@ char **sup(char **ptr, int a, char *str, int x)
 char **strtow(char *str)
 {
 	char **ptr;
-	int i, y, a, x, count;
+	int i, y, a, x;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -100,7 +100,6 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ')
 		{
-			count += 1;
 			continue;
 		}
 
@@ -110,12 +109,7 @@ char **strtow(char *str)
 	if ((str[0] != ' ' && y == 2) || (str[0] == ' ' && y == 1))
 	{
 		ptr = malloc(sizeof(char *) * 2);
-		ptr[0] = malloc(sizeof(char) * (count / 2));
-		for (i = 0; i < (count/2 - 1); i++)
-		{
-			ptr[0][i] = ' ';
-		}
-		ptr[0][i] = '\0';
+		ptr[0] = "";
 		ptr[1] = NULL;
 		return (ptr);
 	}
