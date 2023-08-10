@@ -87,6 +87,7 @@ char **strtow(char *str)
 	char **ptr;
 	int i, y, a, x;
 
+	a = 0;
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	x = 0;
