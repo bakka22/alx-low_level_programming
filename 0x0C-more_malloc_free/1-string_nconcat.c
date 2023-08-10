@@ -34,7 +34,7 @@ int _strlen(char *s)
 * @n : number
 * Return: 1 if alphabet and 0 otherwise
 */
-char *str_concat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
 	int i, x, y, j;
