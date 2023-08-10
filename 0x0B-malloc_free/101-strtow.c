@@ -106,12 +106,8 @@ char **strtow(char *str)
 			y += 1;
 	}
 	if ((str[0] != ' ' && y == 2) || (str[0] == ' ' && y == 1))
-	{
-		ptr = malloc(sizeof(char *) * 2);
-		ptr[0] = "";
-		ptr[1] = NULL;
-		return (ptr);
-	}
+		return (NULL);
+
 	ptr = malloc(sizeof(char *) * y);
 	if (ptr == NULL)
 		return (NULL);
