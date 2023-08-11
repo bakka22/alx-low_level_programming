@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i <= x; i++)
+	for (i = 0; i < x; i++)
 	{
 		ptr[i] = min;
 		min++;
