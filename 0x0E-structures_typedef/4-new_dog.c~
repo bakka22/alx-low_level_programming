@@ -1,4 +1,4 @@
-
+#include <stdlib.h>
 /**
 * _strlen - check if charcter is an alphabet
 * @s : pointer argument
@@ -37,8 +37,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *p;
 
 	p = malloc(sizeof(dog_t));
-	(*p).name = malloc(strlen(name) + 1);
-	(*p).owner = malloc(strlen(owner) + 1);
+	(*p).name = malloc(_strlen(name) + 1);
+	(*p).owner = malloc(_strlen(owner) + 1);
 	(*p).name = name;
 	(*p).age = age;
 	(*p).owner = owner;
