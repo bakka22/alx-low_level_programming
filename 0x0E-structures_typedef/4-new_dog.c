@@ -42,11 +42,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	(*p).name = malloc(_strlen(name) + 1);
 	if ((*p).name == NULL)
+	{
+		free(p);
 		return (NULL);
+	}
 
 	(*p).owner = malloc(_strlen(owner) + 1);
 	if ((*p).owner == NULL)
+	{
+		free(p);
+		free((*p).name);
 		return (NULL);
+	}
 
 	(*p).name = name;
 	(*p).age = age;
