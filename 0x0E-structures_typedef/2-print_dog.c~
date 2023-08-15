@@ -12,9 +12,9 @@ void print_dog(struct dog *d)
 	{
 		return;
 	}
-	if ((*d).name == NULL || ((*d).name)[0] == '\0')
+	if ((*d).name == NULL)
 		(*d).name = "(nil)";
-	if ((*d).owner == NULL || ((*d).owner)[0] == '\0')
+	if ((*d).owner == NULL)
 		(*d).owner = "(nil)";
 	if ((*d).age == 0)
 	{
