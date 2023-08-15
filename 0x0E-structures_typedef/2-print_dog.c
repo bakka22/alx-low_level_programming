@@ -10,6 +10,7 @@ void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
+		printf(" ");
 		return;
 	}
 	if ((*d).name == NULL || ((*d).name)[0] == '\0')
