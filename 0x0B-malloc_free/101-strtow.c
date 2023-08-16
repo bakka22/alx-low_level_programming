@@ -36,20 +36,18 @@ int sup(char *str)
 {
 	int i, y;
 
+	y = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		while (str[i] == ' ')
 			i++;
 
-		if (str[i] != '\0')
-		{
-			y += 1;
-			while (str[i + 1] != ' ' && str[i + 1] != '\0')
-				i++;
-		}
+		y += 1;
+		while (str[i + 1] != ' ' && str[i + 1] != '\0')
+			i++;
 	}
-	return (y);
 	printf("%d", y);
+	return (y);
 }
 /**
 * strtow - check if charcter is an alphabet
@@ -78,27 +76,24 @@ char **strtow(char *str)
 		while (str[i] == ' ')
 			i++;
 
-		if (str[i] != '\0')
+		s = _strlen(str + i, ' ');
+		ptr[x] = malloc(sizeof(char) * (s + 1));
+		if (ptr[x] == NULL)
 		{
-			s = _strlen(str + i, ' ');
-			ptr[x] = malloc(sizeof(char) * (s + 1));
-			if (ptr[x] == NULL)
-			{
-				for (; x >= 0; x--)
-					free(ptr[x]);
+			for (; x >= 0; x--)
+				free(ptr[x]);
 
-				free(ptr);
-				return (NULL);
-			}
-			for (j = 0; j < s; j++)
-			{
-				ptr[x][j] = str[i + j];
-			}
-			ptr[x][j] = '\0';
-			x += 1;
-			while (str[i + 1] != ' ' && str[i + 1] != '\0')
-				i++;
+			free(ptr);
+			return (NULL);
 		}
+		for (j = 0; j < s; j++)
+		{
+			ptr[x][j] = str[i + j];
+		}
+		ptr[x][j] = '\0';
+		x += 1;
+		while (str[i + 1] != ' ' && str[i + 1] != '\0')
+			i++;
 	}
 	ptr[x] = NULL;
 	return (ptr);
