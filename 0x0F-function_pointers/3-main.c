@@ -17,8 +17,7 @@ int main(int argc, char **argv)
 		printf("ERROR\n");
 		exit(98);
 	}
-	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*' &&
-	 argv[2][0] != '/' && argv[2][0] != '%') || argv[2][1] != '\0')
+	if (get_op_function(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 		printf("ERROR\n");
 		exit(99);
