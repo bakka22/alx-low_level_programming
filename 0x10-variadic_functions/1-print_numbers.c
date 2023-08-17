@@ -1,0 +1,40 @@
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdio.h>
+/**
+*print_numbers - sum numbers
+*@separator : number of arguments
+*@n : number of argument
+*@... : elipsus
+*Return: return the sum
+*/
+void print_numbers(const char *separator, const unsigned int n, ...)
+{
+	unsigned int i;
+	va_list nums;
+
+	if (n == 0)
+		return;
+
+	va_start(nums, n);
+	if (separator == NULL)
+	{
+		for (i = 0; i < n; i++)
+		{
+			printf("%d", va_arg(nums, int));
+		}
+		printf("\n");
+	}
+	else
+	{
+		for (i = 0; i < n; i++)
+		{
+			if(i != n - 1)
+				printf("%d%s", va_arg(nums, int), separator);
+			else
+				printf("%d", va_arg(nums, int));
+		}
+		printf("\n");
+	}
+	va_end(nums);
+}
