@@ -23,7 +23,7 @@ void printer(int brk, va_list nums)
 				mid = va_arg(nums, char *);
 				if (mid == NULL)
 				{
-					printf("nil");
+					printf("(nil)");
 					break;
 				}
 				printf("%s", mid);

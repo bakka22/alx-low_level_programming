@@ -49,7 +49,7 @@ void print_all(const char * const format, ...)
 	/*char *mid;*/
 
 	va_start(nums, format);
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		brk = 0;
 		while (!brk && format[i] != '\0')

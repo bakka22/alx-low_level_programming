@@ -8,6 +8,6 @@
 int main(void)
 {
     print_all("swwsifcswiw", "hello", "bakka", 22, 33.5, 'A', NULL, 77);
-    print_all("swws", "hello", "bakka", 22, 33.5, 'A', NULL);
+    print_all(NULL, "hello", "bakka", 22, 33.5, 'A', NULL);
     return (0);
 }
