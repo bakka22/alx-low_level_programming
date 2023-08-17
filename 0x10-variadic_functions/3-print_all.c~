@@ -20,13 +20,13 @@ void printer(int brk, va_list nums)
 				printf("%d", va_arg(nums, int));
 				break;
 			case 3:
-				mid = va_arg(nums, char *)
+				mid = va_arg(nums, char *);
 				if (mid == NULL)
 				{
 					printf("nil");
 					break;
 				}
-				printf("%s", mid));
+				printf("%s", mid);
 				break;
 			case 4:
 				printf("%f", va_arg(nums, double));
