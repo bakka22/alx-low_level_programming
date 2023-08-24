@@ -1,0 +1,66 @@
+/**
+* _strlen2 - check if charcter is an alphabet
+* @s : pointer argument
+* Return: 1 if alphabet and 0 otherwise
+*/
+int _strlen2(char *s)
+{
+	char com, *h;
+	int counter;
+
+	counter = 0;
+	h = s;
+	com = *h;
+	while (1)
+	{
+		if (com == '\0')
+			break;
+
+		counter += 1;
+		h += 1;
+		com = *h;
+	}
+	return (counter);
+}
+#include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+/**
+*add_node_end - add a new list node at head
+*@head :the head of the node
+*@str :string on the node
+*Return: a pointer to the head of the list
+*/
+list_t *add_node_end(list_t **head, const char *str)
+{
+	list_t *new, *tmp;
+
+	tmp = *head;
+	if (tmp != NULL)
+	{
+		while (1)
+		{
+			if (tmp->next == NULL)
+			{
+				break;
+			}
+			tmp = tmp->next;
+		}
+	}
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
+	new->str = strdup(str);
+	if (new->str == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
+	new->len = _strlen2(new->str);
+	new->next = NULL;
+	tmp->next = new;
+	return (new);
+}
