@@ -41,13 +41,16 @@ list_t *add_node(list_t **head, const char *str)
 		free(new);
 		return (NULL);
 	}
-	if (str == NULL)
+	if (str = NULL)
 	{
-		free(new);
-		return (NULL);
+		new->str = NULL;
+		new->len = 0;
 	}
-	new->str = strdup(str);
-	new->len = _strlen(new->str);
+	else
+	{
+		new->str = strdup(str);
+		new->len = _strlen(new->str);
+	}
 	new->next = *head;
 	*head = new;
 	return (new);
