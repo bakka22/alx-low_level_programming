@@ -7,7 +7,7 @@
 *@n :intger on the node
 *Return: a pointer to the head of the list
 */
-list_t *add_node(list_t **head, const int n)
+listint_t *add_node(listint_t **head, const int n)
 {
 	listint_t *new;
 
