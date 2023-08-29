@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count;
 
 	if (head == NULL)
-		return (0);
+		exit(98);
 	lim = 0;
 	count = 0;
 	arr = malloc(sizeof(listint_t **));

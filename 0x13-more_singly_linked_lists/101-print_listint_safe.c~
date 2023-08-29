@@ -31,15 +31,6 @@ size_t print_listint_safe(const listint_t *head)
 				return (count);
 			}
 		}
-		/*(arr + lim) = malloc(sizeof(listint_t *));
-		if (arr[lim] == NULL)
-		{
-			for(; lim >= 0; lim--)
-			{
-				free(arr[lim]);
-				exit(98);
-			}
-		}*/
 		arr[lim] = (listint_t *)head;
 		lim++;
 		printf("[%p] %d\n", (void *)head, head->n);
