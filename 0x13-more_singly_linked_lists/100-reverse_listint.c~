@@ -21,7 +21,7 @@ listint_t *reverse_listint(listint_t **head)
 		*head = pos2->next;
 	pos1->next = NULL;
 	pos2->next = pos1;
-	if ((*head)->next != NULL)
+	if (*head != pos2)
 	{
 		while (1)
 		{
