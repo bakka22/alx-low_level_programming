@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
-*free_listint - free a linked list
+*free_listint2 - free a linked list
 *@head : head of the list
 *Return: nothing
 */
@@ -18,6 +18,6 @@ void free_listint2(listint_t **head)
 		if (*head == NULL)
 			break;
 		tmp = tmp->next;
-		free(head);
+		free(*head);
 	}
 }
