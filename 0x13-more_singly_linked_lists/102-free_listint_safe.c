@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
-*_r - ...
+*_r2 - ...
 *@list : ...
 *@size : ...
 *@new : ...
@@ -42,9 +42,13 @@ size_t free_listint_safe(listint_t **h)
 	count = 0;
 	while (*h != NULL)
 	{
+		*h = tmp;
+		if (*h == NULL)
+			break;
+		tmp = tmp->next;
 		for (i = 0; i < count; i++)
 		{
-			if (tmp->next == arr[i])
+			if (tmp != NULL && tmp->next == arr[i])
 			{
 				free(arr);
 				free(*h);
@@ -57,11 +61,8 @@ size_t free_listint_safe(listint_t **h)
 		}
 		count++;
 		arr = _r2(arr, count, *h);
-		tmp = tmp->next;
 		free(*h);
-		*h = tmp;
 	}
 	free(arr);
-	*h = NULL;
 	return (count * sizeof(listint_t));
 }
