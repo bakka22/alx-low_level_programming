@@ -38,12 +38,12 @@ size_t free_listint_safe(listint_t **h)
 
 	if (*h == NULL || h == NULL)
 		return (0);
-	if (*h == (*h)->next)
+	/*if (*h == (*h)->next)
 	{
 		free(*h);
 		*h = NULL;
 		return (1);
-	}
+	}*/
 	tmp = *h;
 	count = 0;
 	while (*h != NULL)
