@@ -36,7 +36,7 @@ size_t free_listint_safe(listint_t **h)
 	listint_t **arr = NULL, *tmp;
 	size_t count, i;
 
-	if (*h == NULL || h == NULL)
+	if (h == NULL || *h == NULL)
 		return (0);
 	/*if (*h == (*h)->next)
 	{
