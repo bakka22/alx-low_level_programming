@@ -13,6 +13,7 @@ const listint_t **_r(const listint_t **list, size_t size, listint_t *new)
 {
 	const listint_t **newlist;
 	size_t i;
+
 	newlist = malloc(size * sizeof(listint_t *));
 	if (newlist == NULL)
 	{
@@ -23,7 +24,7 @@ const listint_t **_r(const listint_t **list, size_t size, listint_t *new)
 		newlist[i] = list[i];
 	newlist[i] = new;
 	free(list);
-	return(newlist);
+	return (newlist);
 }
 /**
 *print_listint_safe - print a linked list
@@ -46,7 +47,7 @@ size_t print_listint_safe(const listint_t *head)
 			{
 				free(arr);
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				return(count);
+				return (count);
 			}
 		}
 		count++;

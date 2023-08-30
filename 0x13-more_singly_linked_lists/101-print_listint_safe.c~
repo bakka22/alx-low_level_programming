@@ -23,7 +23,7 @@ const listint_t **_r(const listint_t **list, size_t size, listint_t *new)
 		newlist[i] = list[i];
 	newlist[i] = new;
 	free(list);
-	return(newlist);
+	return (newlist);
 }
 /**
 *print_listint_safe - print a linked list
@@ -46,12 +46,12 @@ size_t print_listint_safe(const listint_t *head)
 			{
 				free(arr);
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				return(count);
+				return (count);
 			}
 		}
+		count++;
 		arr = _r(arr, count, (listint_t *)head);
 		printf("[%p] %d\n", (void *)head, head->n);
-		count++;
 		head = head->next;
 	}
 	free(arr);
