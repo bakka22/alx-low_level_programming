@@ -59,7 +59,7 @@ size_t free_listint_safe(listint_t **h)
 				free(arr);
 				free(tmp);
 				*h = NULL;
-				count += 2;
+				count++;
 				return (count);
 			}
 		}

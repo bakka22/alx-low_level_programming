@@ -54,11 +54,9 @@ size_t free_listint_safe(listint_t **h)
 		*h = (*h)->next;
 		for (i = 0; i < count; i++)
 		{
-			if (*h != NULL && ((*h)->next == arr[i] || (*h)->next == tmp))
+			if (*h != NULL && (*h == arr[i] || *h == tmp))
 			{
 				free(arr);
-				free(tmp);
-				tmp = *h;
 				free(tmp);
 				*h = NULL;
 				count += 2;
