@@ -38,34 +38,23 @@ size_t free_listint_safe(listint_t **h)
 
 	if (h == NULL || *h == NULL)
 		return (0);
-	/*if (*h == (*h)->next)
-	{
-		free(*h);
-		*h = NULL;
-		return (1);
-	}*/
-	tmp = *h;
 	count = 0;
-	while (tmp != NULL)
+	while (*h != NULL)
 	{
-		tmp = *h;
-		if (tmp == NULL)
-			break;
-		*h = (*h)->next;
 		for (i = 0; i < count; i++)
 		{
-			if (*h != NULL && (*h == arr[i] || *h == tmp))
+			if (*h == arr[i])
 			{
 				free(arr);
-				free(tmp);
 				*h = NULL;
-				count++;
 				return (count);
 			}
 		}
 		count++;
 		arr = _r2(arr, count, *h);
-		free(tmp);
+		tmp = (*h)->next;
+		free(*h);
+		*h = tmp;
 	}
 	free(arr);
 	return (count);
