@@ -12,6 +12,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int i;
 	unsigned long int pow;
+
 	if (index > 63)
 		return (-1);
 	pow = 2;
