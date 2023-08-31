@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdio.h>
+#include <limits.h>
 /**
 *print_binary - convert a base2 int to base 10 unsigned int
 *@n : binary int
@@ -10,8 +11,9 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int x = n, i;
 
+	if (x >= (unsigned long int)INT_MIN)
+		return;
 	i = 0;
-	printf("%ld---%lu\n", x, x);
 	while (x)
 	{
 		i++;

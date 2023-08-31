@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	unsigned long int x = n, i;
 
 	if (x >= (unsigned long int)INT_MIN)
-		return;
+		x = n = INT_MAX;
 	i = 0;
 	while (x)
 	{
