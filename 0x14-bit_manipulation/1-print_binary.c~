@@ -9,22 +9,21 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int x = n, i;
+	int i, y;
 
-	if (x >= (unsigned long int)INT_MIN)
-		return;
-	i = 0;
-	while (x)
+	for (i = 63; i >= 0; i--)
 	{
-		i++;
-		x = n >> i;
+		if ((n >> i) & 1)
+		{
+			_putchar('1');
+			y++;
+		}
+		else if (y)
+		{
+			_putchar('0');
+		}
 	}
-	if (i != 0)
-		i--;
-	for (; i > 0; i--)
-	{
-		_putchar(48 + ((n >> i) & 1));
-	}
-	_putchar(48 + ((n >> i) & 1));
+	if (!y)
+		_putchar('0');
 
 }
