@@ -54,12 +54,12 @@ int main(int ac, char **av)
 			error(98, av);
 		if (rd == 0)
 			break;
-		y = open(av[2], O_WRONLY | O_APPEND);
-			if (y < 0)
-				error(99, av);
 		wr = write(y, buf, rd);
 		if (wr < 0)
 		error(99, av);
+		y = open(av[2], O_WRONLY | O_APPEND);
+		if (y < 0)
+			error(99, av);
 	}
 	clx = close(x);
 	if (clx < 0)
