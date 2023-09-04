@@ -20,13 +20,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	x = open(filename, O_RDONLY);
 	if (x < 0)
 		return (0);
-	while (read(x, &buffer, 1))
+	while (read(x, &buffer, 1) && letters)
 	{
 		count++;
-		if (letters)
-			write(1, &buffer, 1);
-		if (letters > 0)
-			letters--;
+		write(1, &buffer, 1);
+		letters--;
 	}
 	count++;
 	return (count);
