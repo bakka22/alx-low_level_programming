@@ -67,13 +67,13 @@ int main(int ac, char **av)
 	clx = close(x);
 	if (clx < 0)
 	{
-		dprintf(STDERR_FILENO, "aError: Can't close fd %d\n", x);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", x);
 		exit(100);
 	}
 	cly = close(y);
 	if (cly < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", y);
+		dprintf(STDERR_FILENO, "aError: Can't close fd %d\n", y);
 		exit(100);
 	}
 	return (0);
