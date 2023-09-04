@@ -7,7 +7,7 @@
 *error - ....
 *@ind: ....
 *@av: ....
-*#buf: ....
+*@buf: ....
 *Return: nothing
 */
 void error(int ind, char **av, char *buf)
@@ -15,7 +15,7 @@ void error(int ind, char **av, char *buf)
 	switch (ind)
 	{
 		case 97:
-			dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+			dprintf(STDERR_FILENO, "aUsage: cp file_from file_to\n");
 			free(buf);
 			exit(97);
 			break;
