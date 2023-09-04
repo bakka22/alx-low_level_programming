@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	count = read(x, (void *)buffer, letters);
-	checker = write(1, buffer, (size_t)count);
+	checker = write(1, buffer, letters);
 	if (checker < 0 || checker < count)
 	{
 		free(buffer);
