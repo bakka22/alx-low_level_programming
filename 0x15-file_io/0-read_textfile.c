@@ -28,5 +28,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (letters > 0)
 			letters--;
 	}
+	count++;
 	return (count);
 }
