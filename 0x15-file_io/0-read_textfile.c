@@ -19,6 +19,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 	x = open(filename, O_RDONLY);
+	if (x == -1)
+		return (0);
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 	{
@@ -26,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	count = read(x, (void *)buffer, letters);
-	checker = write(1, buffer, letters);
+	checker = write(1, buffer, (size_t)count);
 	if (checker < 0 || checker < count)
 	{
 		free(buffer);
