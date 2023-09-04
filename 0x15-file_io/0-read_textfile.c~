@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "main.h"
+#include <unistd.h>
+#include <fcnlt.h>
+/**
+*read_textfile - reads a text file
+*@filename : the name of the file
+*@letters : the number of letters to read
+*Return: the actual number of letters it could read
+*/ 
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+
+}
