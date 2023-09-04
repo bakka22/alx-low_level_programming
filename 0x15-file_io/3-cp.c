@@ -37,8 +37,14 @@ int main(int ac, char **av)
 {
 	int x, y;
 	ssize_t rd, wr, clx, cly;
-	char buf[1024];
+	char *buf;
 
+	buf = malloc(sizeof(char) * 1024);
+	if (buf == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
+		exit(99);
+	}
 	if (ac != 3)
 		error(97, av);
 	x = open(av[1], O_RDONLY);
