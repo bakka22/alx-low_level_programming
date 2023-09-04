@@ -40,7 +40,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 		error(97, av);
-	x = open(av[1], O_RDONLY | O_DSYNC);
+	x = open(av[1], O_RDONLY);
 	if (x < 0)
 		error(98, av);
 	y = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
