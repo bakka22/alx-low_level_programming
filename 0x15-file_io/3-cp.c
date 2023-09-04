@@ -24,6 +24,7 @@ void error(int ind, char **av)
 		case 99:
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
 			exit(99);
+			break;
 	}
 }
 /**

@@ -51,7 +51,7 @@ int main(int ac, char **av)
 			error(99, av);
 		rd = read(x, buf, 1024);
 		y = open(av[2], O_WRONLY | O_APPEND);
-	} while (r > 0);
+	} while (rd > 0);
 	clx = close(x);
 	if (clx < 0)
 	{
