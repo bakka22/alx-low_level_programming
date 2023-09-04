@@ -43,7 +43,7 @@ int main(int ac, char **av)
 	x = open(av[1], O_RDONLY | O_DSYNC);
 	if (x < 0)
 		error(98, av);
-	y = open(av[2], O_RDWR | O_CREAT | O_DSYNC | O_TRUNC, 0664);
+	y = open(av[2], O_WRONLY | O_CREAT | O_DSYNC | O_TRUNC, 0664);
 	if (y < 0)
 		error(99, av);
 	rd = 1;
@@ -54,6 +54,9 @@ int main(int ac, char **av)
 			error(98, av);
 		if (rd == 0)
 			break;
+		y = open(ac[2], O_WRONLY | O_APPEND);
+			if (y < 0)
+				error(99, av);
 		wr = write(y, buf, rd);
 		if (wr < 0)
 		error(99, av);
