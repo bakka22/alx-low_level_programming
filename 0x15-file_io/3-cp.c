@@ -42,6 +42,7 @@ int main(int ac, char **av)
 	ssize_t rd, wr, clx, cly;
 	char *buf;
 
+	buf = NULL;
 	if (ac != 3)
 		error(97, av, buf);
 	buf = malloc(sizeof(char) * 1024);
