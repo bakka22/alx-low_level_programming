@@ -39,7 +39,7 @@ void error(int ind, char **argv, char *buf)
 int main(int argc, char **argv)
 {
 	int x, y;
-	ssize_t rd, wr, clx, cly;
+	int rd, wr, clx, cly;
 	char *buf;
 
 	buf = NULL;
