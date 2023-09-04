@@ -49,7 +49,7 @@ int main(int ac, char **av)
 	rd = 1;
 	while (rd)
 	{
-		rd = read(x, buf, 1023);
+		rd = read(x, buf, 1024);
 		if (rd < 0)
 			error(98, av);
 		if (rd == 0)
