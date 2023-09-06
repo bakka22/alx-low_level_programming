@@ -46,7 +46,6 @@ int sup(char *str)
 		while (str[i + 1] != ' ' && str[i + 1] != '\0')
 			i++;
 	}
-	printf("%d", y);
 	return (y);
 }
 /**
