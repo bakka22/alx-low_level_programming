@@ -20,7 +20,6 @@ int _strlen(char *s, char c)
 	{
 		if (com == c)
 			break;
-
 		counter += 1;
 		h += 1;
 		com = *h;
@@ -41,7 +40,8 @@ int sup(char *str)
 	{
 		while (str[i] == ' ')
 			i++;
-
+		if (str[i] == '\0')
+			break;
 		y += 1;
 		while (str[i + 1] != ' ' && str[i + 1] != '\0')
 			i++;
@@ -57,16 +57,12 @@ int sup(char *str)
 char **strtow(char *str)
 {
 	char **ptr;
-	int i, y, x, s, j;
+	int i, y = sup(str), x = 0, s = 0, j;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	x = 0;
-	s = 0;
-	y = sup(str);
 	if (y == 0)
 		return (NULL);
-
 	ptr = malloc(sizeof(char *) * (y + 1));
 	if (ptr == NULL)
 		return (NULL);
@@ -75,14 +71,15 @@ char **strtow(char *str)
 	{
 		while (str[i] == ' ')
 			i++;
-
+		if (str[i] == '\0')
+			break;
+		if (str[i] != ' ' && str[i] != '\0')
 		s = _strlen(str + i, ' ');
 		ptr[x] = malloc(sizeof(char) * (s + 1));
 		if (ptr[x] == NULL)
 		{
 			for (; x >= 0; x--)
 				free(ptr[x]);
-
 			free(ptr);
 			return (NULL);
 		}
