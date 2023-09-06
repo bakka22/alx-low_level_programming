@@ -55,14 +55,15 @@ int sup(char *str)
 */
 char **strtow(char *str)
 {
-	char **ptr;
+	char **ptr = NULL;
 	int i, y = sup(str), x = 0, s = 0, j;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	if (y == 0)
 		return (NULL);
-	ptr = malloc(sizeof(char *) * (y));
+	if (y != 0)
+		ptr = malloc(sizeof(char *) * y);
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
@@ -72,9 +73,8 @@ char **strtow(char *str)
 			i++;
 		if (str[i] == '\0')
 			break;
-		if (str[i] != ' ' && str[i] != '\0')
 		s = _strlen(str + i, ' ');
-		ptr[x] = malloc(sizeof(char) * (s));
+		ptr[x] = malloc(sizeof(char) * s);
 		if (ptr[x] == NULL)
 		{
 			for (; x >= 0; x--)
@@ -91,6 +91,7 @@ char **strtow(char *str)
 		while (str[i + 1] != ' ' && str[i + 1] != '\0')
 			i++;
 	}
-	ptr[x] = NULL;
+	if (ptr != NULL)
+		ptr[x] = NULL;
 	return (ptr);
 }

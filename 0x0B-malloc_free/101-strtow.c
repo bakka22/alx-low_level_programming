@@ -63,7 +63,7 @@ char **strtow(char *str)
 	if (y == 0)
 		return (NULL);
 	if (y != 0)
-		ptr = malloc(sizeof(char *) * y);
+		ptr = malloc(sizeof(char *) * (y + 1));
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
@@ -74,7 +74,7 @@ char **strtow(char *str)
 		if (str[i] == '\0')
 			break;
 		s = _strlen(str + i, ' ');
-		ptr[x] = malloc(sizeof(char) * s);
+		ptr[x] = malloc(sizeof(char) * (s + 1));
 		if (ptr[x] == NULL)
 		{
 			for (; x >= 0; x--)
