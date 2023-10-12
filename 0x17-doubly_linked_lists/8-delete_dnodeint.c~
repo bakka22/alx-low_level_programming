@@ -2,14 +2,14 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
-*delete_nodeint_at_index - delets the head node
+*delete_dnodeint_at_index - delets the head node
 *@head : the head of the list
 *@index : index for node to delete
 *Return: data of the poped node
 */
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	listint_t *tmp, *del;
+	dlistint_t *tmp, *del;
 
 	if (head == NULL)
 		return (-1);
@@ -33,6 +33,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		del = tmp->next->next;
 		free(tmp->next);
 		tmp->next = del;
+		if (del)
+			del->prev = tmp;
 	}
 	return (1);
 }
