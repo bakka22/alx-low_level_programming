@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-*add_nodeint - add a new list node at head
+*add_dnodeint - add a new list node at head
 *@head :the head of the node
 *@n :intger on the node
 *Return: a pointer to the head of the list
 */
-dlistint_t *add_nodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
 
