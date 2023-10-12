@@ -67,8 +67,17 @@ unsigned int idx, int n)
 	}
 	return (new);
 }
-void repl(dlistint_t **tmp, dlistint_t **new, dlistint_t **rep,\
-unsigned int *idx)
+/**
+*repl - ...
+*@tmp : ...
+*@new : ...
+*@rep : ...
+*@idx : ...
+*Return: ...
+*/
+void repl(dlistint_t **tmp, dlistint_t **new,\
+dlistint_t **rep, unsigned int *i\
+dx)
 {
 	(*idx)--;
 	while ((*idx)--)
