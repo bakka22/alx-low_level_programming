@@ -19,13 +19,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new == NULL)
 		return (0);
 	new->key = (char *)key;
-	new->value = malloc(sizeof(char) * strlen(value));
-	if (new->value == NULL)
+	if (value)
 	{
-		free(new);
-		return (0);
+		new->value = malloc(sizeof(char) * strlen(value));
+		if (new->value == NULL)
+		{
+			free(new);
+			return (0);
+		}
+			strcpy(new->value, value);
 	}
-	strcpy(new->value, value);
+	else 
+		new->value = "";
 	x = key_index((unsigned char *) key, ht->size);
 	if ((ht->array)[x])
 	{
